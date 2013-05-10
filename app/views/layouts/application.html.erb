@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>John K Web Design</title>
+<%= stylesheet_link_tag 'application' %>
+<%= javascript_include_tag 'application' %> 
+</head>
+  <body>
+    <div id="topPanel">
+      <%= render :partial => "layouts/topnav" %>
+    
+      <div>
+          <a href="/"><img src="/assets/logo2.gif"  title="John Kropka Services" alt="John Kropka Services"  /></a>
+      </div>
+      <h2 style="padding-left:110px;">John K</h2>
+      <h2 style="padding-left:110px;color:#aeaeae;">Web Design</h2>
+      
+      <div id="headerPanelfast">
+              <h2>rails</h2>
+              <p>Application Development</p>
+              <%= link_to "", rails_path %>
+      </div>
+      <div id="headerPanelsecond">
+              <h2>api</h2>
+              <p>Design and Integration </p>
+              <%= link_to "", api_path %>
+      </div>
+      <div id="headerPanelthird">
+              <h2>Services</h2>
+              <p>Site Enhancements</p>
+              <%= link_to "", services_path %>
+      </div>
+      <div class="inner_copy"></div>
+    </div>
+    <div id="bodyPanel">
+      <%= yield %>
+    </div>
+    
+     <%= render :partial => "layouts/footer" %>
+
+  </body>
+</html>
