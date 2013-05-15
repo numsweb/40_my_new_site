@@ -50,11 +50,11 @@ ul {list-style-type:none}
 #topPanel ul li a:hover {width:74px;height:36px;text-decoration:none;background:url(button.gif) no-repeat 0 0 #AEAEAE;color:#fff}
 #topPanel ul li.active a {width:74px;display:block;height:36px;background:url(button.gif) no-repeat 0 0 #AEAEAE;color:#fff;text-align:center;margin:0 1px 0 0}
 /* HEADER PANEL*/
-#topPanel #headerPanelfast {width:246px;height:263px;position:absolute;top:0;left:0;margin:110px 0 0;padding:0;background:url(orange-normal.jpg) no-repeat 0 0 #FC5F00;color:#fff}
-#topPanel #headerPanelfast a {width:246px;height:263px;display:block;text-decoration:none}
-#topPanel #headerPanelfast a:hover {width:246px;height:263px;background:url(orange-hover.jpg) no-repeat 0 0 #FC5F00;color:#fff;text-decoration:none}
-#topPanel #headerPanelfast h2 {display:block;width:90px;height:47px;margin:54px 0 0 120px;font:28px/28px "Trebuchet MS",Arial,Helvetica,sans-serif;font-weight:bold;text-transform:uppercase;position:absolute;top:0;left:0;z-index:1}
-#topPanel #headerPanelfast p {width:163px;display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;position:absolute;top:0;left:0;z-index:1;padding:0;margin:105px 50px 0 38px}
+#topPanel #headerPanelfist {width:246px;height:263px;position:absolute;top:0;left:0;margin:110px 0 0;padding:0;background:url(orange-normal.jpg) no-repeat 0 0 #FC5F00;color:#fff}
+#topPanel #headerPanelfist a {width:246px;height:263px;display:block;text-decoration:none}
+#topPanel #headerPanelfist a:hover {width:246px;height:263px;background:url(orange-hover.jpg) no-repeat 0 0 #FC5F00;color:#fff;text-decoration:none}
+#topPanel #headerPanelfist h2 {display:block;width:90px;height:47px;margin:54px 0 0 120px;font:28px/28px "Trebuchet MS",Arial,Helvetica,sans-serif;font-weight:bold;text-transform:uppercase;position:absolute;top:0;left:0;z-index:1}
+#topPanel #headerPanelfist p {width:163px;display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;position:absolute;top:0;left:0;z-index:1;padding:0;margin:105px 50px 0 38px}
 #topPanel #headerPanelsecond {width:246px;height:263px;position:absolute;top:0;left:258px;margin:110px 0 0;padding:0;background:url(green-normal.jpg) no-repeat 0 0 #FC5F00;color:#fff}
 #topPanel #headerPanelsecond a {width:246px;height:263px;display:block;text-decoration:none}
 #topPanel #headerPanelsecond a:hover {width:246px;height:263px;background:url(green-hover.jpg) no-repeat 0 0 #FC5F00;color:#fff;text-decoration:none}
@@ -89,10 +89,10 @@ ul {list-style-type:none}
 #bodyPanel p.dotline {background:url(dot-line.gif) 0 0 repeat-x #fff;padding:0;margin:0 40px 0 25px;color:#000}
 #bodyPanel p.capstext {background:#fff;font:18px/24px Georgia, "Times New Roman", Times, serif;font-style:italic;color:#555;padding:2px 10px 0 25px ;margin:0 35px 10px 0}
 #bodyPanel p.more {height:26px;padding:0;background:none;margin:0}
-#bodyPanel p.more a {width:76px;height:26px;display:block;margin:314px 20px 19px 618px;background:url(more.gif) 0 0 no-repeat #fff;color:#555;text-decoration:none;font:15px/26px "Trebuchet MS",Arial,Helvetica,sans-serif;padding:0 0 0 10px;text-transform:uppercase;position:absolute;top:0;right:0}
+#bodyPanel p.more a {padding-left:4px;width:76px;height:26px;float:right;background:url(more.gif) 0 0 no-repeat #fff;color:#555;text-decoration:none;font:15px/26px "Trebuchet MS",Arial,Helvetica,sans-serif;text-transform:uppercase;margin-top:84px;}
 #bodyPanel p.more a:hover {background:url(more.gif) 0 0 no-repeat #fff;color:#216EBD;text-decoration:none}
 #bodyPanel h3 {background:#fff;display:block;width:500px;height:34px;margin:34px 0 12px 0;font:30px/30px Georgia, "Times New Roman", Times, serif;font-weight:normal;padding:0 0 0 20px;color:#FF7113}
-#bodyPanel #testimonial {width:283px;height:162px;display:block;background:url(images/testimonial-bg.gif) 0 0 no-repeat #FFF6DB;padding:32px 33px 0 148px;margin:0 0 0 20px;color:#786321}
+#bodyPanel #testimonial {width:283px;height:162px;display:block;background:url(testimonial-bg.gif)  0 0 no-repeat #FFF6DB;padding:32px 33px 0 148px;margin:0 0 0 20px;color:#786321}
 #bodyPanel #testimonial p {background:none;margin:0;padding:0 0 5px 0}
 #bodyPanel #testimonial p span {color:#786321 !Important;background:#FFFAED !Important}
 #bodyPanel p.moretwo {height:26px;padding:0;background:none;margin:0}
@@ -121,6 +121,7 @@ ul {list-style-type:none}
 #footercssPanel a {width:86px;height:31px;display:block;background:url(css-img.gif) no-repeat 0 0 #DCDCDC;text-decoration:none;font:14px/31px "Trebuchet MS",Arial,Helvetica,sans-serif;color:#2F2F2F;text-transform:uppercase;padding:0 0 0 10px;position:absolute;top:0;right:0}
 #footercssPanel a:hover {background:url(css-img.gif) no-repeat 0 0 #DCDCDC;color:#216EBD;text-decoration:none}
 
+
 .image{
     float:left;
     border:1px solid red;
@@ -130,3 +131,4 @@ ul {list-style-type:none}
     float:left;
     border:1px solid green;
 }
+
