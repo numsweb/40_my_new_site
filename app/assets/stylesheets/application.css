@@ -67,10 +67,10 @@ ul {list-style-type:none}
 #topPanel #headerPanelthird p {width:163px;display:block;font:12px/18px Arial,Helvetica,sans-serif;font-weight:bold;position:absolute;top:0;left:0;z-index:1;padding:0;margin:105px 50px 0 38px}
 
 /* TOP PANEL2*/
-#topPanel2 {width:762px;height:60px;position:relative;margin:0 auto;padding:0}
+#topPanel2 {width:850px;height:60px;position:relative;margin:0 auto;padding:0}
 #topPanel2 img {border:0;width:80px;height:80px;z-index:0;padding:0;position:absolute;margin:0 0 0 21px;}
 /* MENU PANEL*/
-#topPanel2 ul {display:block;width:732px;height:36px;position:absolute;top:0;right:0;margin:11px 0 0;padding:0 29px 0 0;border-bottom:1px solid #AEAEAE}
+#topPanel2 ul {display:block;width:850px;height:36px;position:absolute;top:0;right:0;margin:11px 0 0;padding:0 29px 0 0;border-bottom:1px solid #AEAEAE}
 #topPanel2 ul li {float:right;font:12px/36px "Trebuchet MS",Arial,Helvetica,sans-serif;font-weight:bold}
 #topPanel2 ul li a {width:74px;height:36px;display:block;padding:0;color:#555;background:#fff;text-decoration:none;text-align:center;margin:0 1px 0 0;top:0;left:0}
 #topPanel2 ul li a:hover {width:74px;height:36px;text-decoration:none;background:url(button.gif) no-repeat 0 0 #AEAEAE;color:#fff}
@@ -132,3 +132,7 @@ ul {list-style-type:none}
     border:1px solid green;
 }
 
+#search_form{margin-top:20px;padding-top:10px;padding-bottom:10px;padding-left:10px;margin-bottom:30px;width:300px;border:1px solid #efefef;}
+.submit{padding-left:145px;padding-top:10px;}
+
+#user-content{width:762px;position:relative;margin:0 auto;margin-top:25px;padding-bottom:25px;"}

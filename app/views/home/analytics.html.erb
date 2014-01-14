@@ -1,0 +1,66 @@
+
+<div id="bodyPanel">
+  <div id="search_form">
+    <%= form_for :search, :url => analytics_path, :method => :post  do |f| %>
+      <table>
+        <tr><td>Start Date:</td><td><%= select_date Date.today+0.day, :prefix => :start_date, :use_short_month => true %></td></tr>
+        <tr><td>End Date:</td><td><%= select_date Date.today+1.day, :prefix => :end_date, :use_short_month => true %></td></tr>
+        <tr><td></td><td class="submit"><%= f.submit "Search"%></td></tr>
+      </table>
+    <% end %>
+  </div>
+  <% unless @chart.blank? %>
+    <table>
+      <tr><td>Start Date:</td><td><%= @start_date.to_date %></td></tr>
+      <tr><td>End Date:</td><td><%= @end_date.to_date %></td></tr>
+    </table>
+    <div id='chart'></div>
+    <%= render_chart(@chart, 'chart') %>
+  <% end %>
+</div>
+<div id="container" style="width:100%; height:400px;"></div>
+
+
+<script type='text/javascript'>
+$(function () { 
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Fruit Consumption'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }]
+    });
+});​
+
+var chart1; // globally available
+$(function() {
+      chart1 = new Highcharts.StockChart({
+         chart: {
+            renderTo: 'container'
+         },
+         rangeSelector: {
+            selected: 1
+         },
+         series: [{
+            name: 'USD to EUR',
+            data: usdtoeur // predefined JavaScript array
+         }]
+      });
+   });
+</script>

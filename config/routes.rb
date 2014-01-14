@@ -1,4 +1,5 @@
 Myapp4::Application.routes.draw do
+  devise_for :users
   get "home/index"
 
   # The priority is based upon order of creation:
@@ -53,11 +54,14 @@ Myapp4::Application.routes.draw do
   # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
-
+  
+  resources :users
+  
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-
+    post '/analytics' => 'home#analytics'
+    get '/analytics' => 'home#analytics'
     get '/support' =>  'home#support'
     get '/contact' =>  'home#contact'
     get '/clients' =>   'home#clients'
@@ -66,4 +70,8 @@ Myapp4::Application.routes.draw do
     get '/api' =>  'home#api'
     get '/services' =>  'home#services'
     get '/' =>  'home#index'
+    get '/0.1/api_users' => 'api#get_users'
+    get '/0.1/api_users/:id' => 'api#get_user'
+
+    root :to => "home#index"
 end
