@@ -70,8 +70,8 @@ Myapp4::Application.routes.draw do
     get '/api' =>  'home#api'
     get '/services' =>  'home#services'
     get '/' =>  'home#index'
-    get '/0.1/api_users' => 'api#get_users'
-    get '/0.1/api_users/:id' => 'api#get_user'
+    get '/0.1/api_users' => 'api#get_users', as: "get_users"
+    get '/0.1/api_users/:id' => 'api#get_user', as: "equipment_item_tasks"
 
     root :to => "home#index"
 end

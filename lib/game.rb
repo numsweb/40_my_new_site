@@ -1,14 +1,38 @@
 class Game
 
+  ################################################################
+  #An example execution might be:
+  #require "game"
+  #game = Game.new(players: 4)
+  #game.move(player: 1, dice: 2, value: 3)
+  #game.move(player: 2, dice: 1, value: 3)
+  #game.claim(dice: 19, value: 3) 
+  #    result:  An outrageous claim! -> 0.000000000516%
+  #
+  #
+  ##  Now if we do this:
+  #game.move(player: 3, dice: 5, value: 3)
+  #game.move(player: 4, dice: 5, value: 3)
+  #game.move(player: 1, dice: 3, value: 3)
+  #game.move(player: 2, dice: 3, value: 3)
+  ## There are 19 3's on the board.
+  #game.claim(dice: 20, value: 3)
+  ##1! / 1!0! * 1/6^1 * 5/6^0 = 16.67%
+  ################################################################
   def initialize(players)
     @players = players[:players].to_i
     #initialize a hash of counters for each dice and the total_used
     @counters = {1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, :total_used => 0 }
   end
+  
+  def players_count
+    return @players
+  end
 
   def move(params)
     if params[:player].blank? || params[:dice].blank? || params[:value].blank?
-      puts "missing params, required format:  game.move(player: X, dice: X, value: X)'"
+      puts "missing params, required format:  game.move(player: X, dice: X, value: X)"
+      return "missing params, required format:  game.move(player: X, dice: X, value: X)"
     else
       player = params[:player].to_i #the players number
       dice = params[:dice].to_i #the number of dice for this move
@@ -41,23 +65,22 @@ class Game
   
   def claim(params)
     if params[:dice].blank? || params[:value].blank?
-      puts "missing params, required format:  game.move(dice: X, value: X)'" 
+      puts "missing params, required format:  game.claim(dice: X, value: X)"
+      return "missing params, required format:  game.claim(dice: X, value: X)" 
     else
       probability = check_probability(params[:dice].to_i, params[:value].to_i)
     end
+    return probability
   end
   
   def challange(params)
     if params[:dice].blank? || params[:value].blank?
-      puts "missing params, required format:  game.challange(dice: X, value: X)'" 
+      puts "missing params, required format:  game.challange(dice: X, value: X)"
+      return "missing params, required format:  game.challange(dice: X, value: X)" 
     else
       value = params[:value].to_i #the number on the dice (1-6)
       total_used = get_count_for_value(value)
-      if params[:dice].to_i <= total_used
-        return true
-      else
-        return false
-      end
+      return params[:dice].to_i <= total_used
     end
   end
   
@@ -121,6 +144,7 @@ class Game
     
     #print the answer string
     puts output_string
+    return output_string
   end
     
 

@@ -11,6 +11,7 @@ Myapp4::Application.configure do
   # Log error messages when you accidentally call methods on nil.
   ## deprecated in rails 4 and no longer works@
   ##config.whiny_nils = true
+  config.eager_load = false
 
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
