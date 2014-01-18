@@ -124,6 +124,7 @@ PLATFORMS
 
 DEPENDENCIES
   arel!
+  builder
   devise
   google_visualr (>= 2.1)
   highcharts-rails (~> 3.0.0)

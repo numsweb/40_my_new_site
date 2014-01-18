@@ -18,6 +18,7 @@ gem "highcharts-rails", "~> 3.0.0"
 gem "mysql2", "~> 0.3.12b4", :platform=>:ruby
 gem "protected_attributes"
 gem "devise"
+gem "builder"
 
 
 # To use ActiveModel has_secure_password
